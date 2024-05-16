@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action__c</fullName>
+    <description>The category of the change made in Setup. For example, a value of PermSetCreate indicates that an administrator created a permission set. The Display field contains more specific information.</description>
+    <externalId>false</externalId>
+    <label>Action</label>
+    <length>120</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

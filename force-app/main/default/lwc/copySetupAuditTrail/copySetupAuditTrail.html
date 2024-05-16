@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : Ian Brown
+  @group             : 
+  @last modified on  : 05-16-2024
+  @last modified by  : Ian Brown
+-->
+<template>
+    <div class="slds-theme_default">
+        <div class="slds-grid slds-grid_vertical slds-var-p-around_small slds-border_bottom">
+            <div class="slds-col">
+                <p class="slds-text-heading_small">Use the buttons below to copy SetupAuditTrail records to SetupAuditTrail2 and leverage native Salesforce Analytics.</p>
+            </div>
+        </div>
+        <div class="slds-var-p-around_medium">
+            <lightning-button label="Copy Last 24 Hours"
+                class="slds-var-m-right_small"
+                onclick={copyLast24HoursRecords}
+                variant="brand">
+            </lightning-button>
+            <lightning-button label="Copy Last 7 Days"
+                class="slds-var-m-right_small"
+                onclick={copyLastSevenDaysRecords}
+                variant="brand">
+            </lightning-button>
+            <lightning-button label="Copy All"
+                class="slds-var-m-right_small"
+                onclick={copyAllRecords}
+                variant="brand">
+            </lightning-button>
+            <lightning-button label="Delete All"
+                title="Delete all records action"
+                icon-name="utility:delete"
+                icon-position="right"
+                variant="destructive"
+                onclick={deleteAllRecords}>
+            </lightning-button>
+        </div>
+    </div>
+</template>

@@ -16,11 +16,11 @@ Install in [Production](https://login.salesforce.com/packaging/installPackage.ap
 
 ### What is SetupAuditTrail Analytics?
 
-A free, unlocked package which can be installed in production or test instances (sandbox, scratch orgs, developer edition orgs, or trailhead playgrounds) and provisioned to Admin users. It facilitates on-demand (or scheduled) copying of SetupAuditTrail record entries. Canned intervals are as follows: Copy Last 24 Hours, Copy Last 7 Days, and Copy All. 
+A free, unlocked package which can be installed in production or test instances (sandbox, scratch orgs, developer edition orgs, or trailhead playgrounds) and provisioned to Admin users. It facilitates on-demand (or scheduled) copying of SetupAuditTrail record entries. Supplied intervals are: Copy Last 24 Hours, Copy Last 7 Days, and Copy All. 
 
-Click the interval you are interested in and refresh the report chart component to see your results. 
+Click the interval you are interested in and refresh the report chart component to see the results. 
 
-Scheduled apex is included for the Last 24 Hours and can be run independently or use with the on-demand refresh without duplicating data in the destination object.
+Scheduled apex is included and can be used to schedule runs that will retrieve all records from the last 24 Hours. The scheduled apex can run independently or used with the on-demand refresh without duplicating data in the destination object.
 
 ### Does SetupAuditTrail Analytics use Data Storage?
 

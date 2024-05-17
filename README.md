@@ -32,4 +32,4 @@ SetupAuditTrail Analytics includes a Delete All feature to remove all the data i
 
 ### NOTE: 
 
-This feature uses batch apex. 
+This solution uses batch apex. 

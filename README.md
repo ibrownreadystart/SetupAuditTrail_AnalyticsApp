@@ -20,7 +20,7 @@ A free, unlocked package which can be installed in production or test instances 
 
 Click the interval you are interested in and refresh the report chart component to see the results. 
 
-Scheduled apex is included and can be used to schedule runs that will retrieve all records from the last 24 Hours. The scheduled apex can run independently or used with the on-demand refresh without duplicating data in the destination object.
+Scheduled apex is included and can be used to schedule runs that will retrieve all records from the last 24 Hours. The scheduled apex can run independently or be used with the on-demand refresh without duplicating data in the destination object.
 
 ### Does SetupAuditTrail Analytics use Data Storage?
 

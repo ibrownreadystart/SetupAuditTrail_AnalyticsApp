@@ -41,6 +41,6 @@ SetupAuditTrail Analytics includes a Delete All feature to remove all the data i
 ### NOTE: 
 
 This solution uses batch apex and a custom object.
-Custom object record size is 2 KB.
+[Custom object record](https://help.salesforce.com/s/articleView?id=000383664&type=1) size is 2 KB.
 1 GB of custom record data is roughly equivalent to ~524,000 records.
 Consider your Data Storage profile.

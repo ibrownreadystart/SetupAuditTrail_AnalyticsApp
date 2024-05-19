@@ -14,6 +14,14 @@ Install in [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?
 
 Install in [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tU1000000LUUXIA4).
 
+**NOTE**: 
+
+> After installation, the Setup Audit Trail app may take a few moments to appear.
+> Depending on the amount of records retrieved by the Copy action, it can take some time for results to be returned. Clicking the same button muliple times is not required.
+> If you select Copy All and are not seeing immediate results, navigate to Setup > Environments > Jobs > Apex Jobs to see job status.
+> Once installed, create a report with chart based on your use case.
+> Update the Setup Audit Trail Analytics app page to include a Report Chart component pointing to your new custom report.
+
 ### What is SetupAuditTrail Analytics?
 
 A free, unlocked package which can be installed in production or test instances (sandbox, scratch orgs, developer edition orgs, or trailhead playgrounds) and provisioned to Admin users. It facilitates on-demand (or scheduled) copying of SetupAuditTrail record entries. Supplied intervals are: Copy Last 24 Hours, Copy Last 7 Days, and Copy All. 
@@ -26,7 +34,7 @@ Scheduled apex is included and can be used to schedule runs that will retrieve a
 
 Yes! 
 
-SetupAuditTrail does not allow aggregate queries, native reporting, or record-triggered automation. As a setup object, it is unlikely that these features will ever be available on this object. To workaround this for tactical research and use cases, SetupAuditTrail Analytics copies the record data from the standard SetupAuditTrail object into a custom object, SetupAuditTrail2__c. Depending on your data storage, residency, archival, and compliance environment, use this app as needed and accordingly.
+SetupAuditTrail does not allow aggregate queries, native reporting or field filtering, or record-triggered automation. As a setup object, it is unlikely that these features will ever be available on this object. To workaround this for tactical research and use cases, SetupAuditTrail Analytics copies the record data from the standard SetupAuditTrail object into a custom object, SetupAuditTrail2__c. Depending on your data storage, residency, archival, and compliance environment, use this app as needed and accordingly.
 
 SetupAuditTrail Analytics includes a Delete All feature to remove all the data in the custom object when needed. Object records can also be deleted using alternate scheduled automation at an interval appropriate for your use case. Once you are finished using SetupAuditTrail Analytics or you adopt an alternate solution, simply delete the app and data from your org.
 

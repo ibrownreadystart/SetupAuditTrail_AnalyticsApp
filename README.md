@@ -46,3 +46,8 @@ SetupAuditTrail Analytics includes a Delete All feature to remove all the data i
 > [Custom object record](https://help.salesforce.com/s/articleView?id=000383664&type=1) size is 2 KB.
 > 1 GB of custom record data is roughly equivalent to ~524,000 records.
 > Consider your Data Storage profile.
+
+### Does this app duplicate platform data and introduce another avenue that has to be considered for security and sharing?
+
+Yes! I could have called this 'Anti-Pattern Setup Audit Trail Analytics'!
+My motivation for creating this was first, creative curiosity. Secondly, this [Idea](https://ideas.salesforce.com/s/idea/a0B8W00000Gdj0dUAB/add-ability-to-report-on-view-setup-audit-trail-under-administration-reports-sec) on the IdeaExchange from 2009.

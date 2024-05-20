@@ -17,7 +17,7 @@ Install in [Production](https://login.salesforce.com/packaging/installPackage.ap
 **NOTE**: 
 
 > After installation, the Setup Audit Trail app may take a few moments to appear.
-> Depending on the amount of records retrieved by the Copy action, it can take some time for results to be returned. Clicking the same button muliple times is not required.
+> Depending on the amount of records retrieved by the Copy action, it can take some time for results to be returned. Clicking the same button multiple times is not required.
 > If you select Copy All and are not seeing immediate results, navigate to Setup > Environments > Jobs > Apex Jobs to see job status.
 > Once installed, create a report with chart based on your use case.
 > Update the Setup Audit Trail Analytics app page to include a Report Chart component pointing to your new custom report.

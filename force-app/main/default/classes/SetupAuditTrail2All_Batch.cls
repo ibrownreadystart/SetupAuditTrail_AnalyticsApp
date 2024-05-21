@@ -1,4 +1,5 @@
 public with sharing class SetupAuditTrail2All_Batch implements Database.Batchable<sObject> {
+
     public Database.QueryLocator start(Database.BatchableContext batchContext) {
     	String setupAuditTrailQuery = 'SELECT Id, Action, Display, CreatedBy.Name, CreatedDate FROM SetupAuditTrail';
     	if(Test.isRunningTest()) {

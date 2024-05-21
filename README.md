@@ -34,7 +34,7 @@ Scheduled apex is included and can be used to schedule runs that will retrieve a
 
 Yes! 
 
-SetupAuditTrail does not allow aggregate queries, native reporting or field filtering, or record-triggered automation. As a setup object, it is unlikely that these features will ever be available on this object. To workaround this for tactical research and use cases, SetupAuditTrail Analytics copies the record data from the standard SetupAuditTrail object into a custom object, SetupAuditTrail2__c. Depending on your data storage, residency, archival, and compliance environment, use this app as needed and accordingly.
+SetupAuditTrail does not allow aggregate queries, field-level filtering, native reporting, or record-triggered automation. As a setup object, it is unlikely that these features will ever be available on this object. To workaround this for tactical research and use cases, SetupAuditTrail Analytics copies the record data from the standard SetupAuditTrail object into a custom object, SetupAuditTrail2__c. Depending on your data storage, residency, archival, and compliance environment, use this app as needed and accordingly.
 
 SetupAuditTrail Analytics includes a Delete All feature to remove all the data in the custom object when needed. Object records can also be deleted using alternate scheduled automation at an interval appropriate for your use case. Once you are finished using SetupAuditTrail Analytics or you adopt an alternate solution, simply delete the app and data from your org.
 

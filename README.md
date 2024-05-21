@@ -17,10 +17,14 @@ Install in [Production](https://login.salesforce.com/packaging/installPackage.ap
 **NOTE**: 
 
 > After installation, the Setup Audit Trail app may take a few moments to appear.
-> Depending on the amount of records retrieved by the Copy action, it can take some time for results to be returned. Clicking the same button multiple times is not required.
+
+> Depending on the amount of records retrieved by the Copy action, it can take some time for results to be returned.
+
+> Clicking the same button multiple times is not required.
+
 > If you select Copy All and are not seeing immediate results, navigate to Setup > Environments > Jobs > Apex Jobs to see job status.
-> Once installed, create a report with chart based on your use case.
-> Update the Setup Audit Trail Analytics app page to include a Report Chart component pointing to your new custom report.
+
+> Once installed, create a report with chart based on your use case. > Update the Setup Audit Trail Analytics app page to include a Report Chart component pointing to your new custom report.
 
 ### What is SetupAuditTrail Analytics?
 
@@ -41,10 +45,15 @@ SetupAuditTrail Analytics includes a Delete All feature to remove all the data i
 ### NOTE: 
 
 > This solution uses batch apex.
+
 > Consider other batch operations that may be running in your org.
+
 > This solutions uses a custom object.
+
 > [Custom object record](https://help.salesforce.com/s/articleView?id=000383664&type=1) size is 2 KB.
+
 > 1 GB of custom record data is roughly equivalent to ~524,000 records.
+
 > Consider your Data Storage profile.
 
 ### Does this app duplicate platform data and introduce another avenue that has to be considered for security and sharing?

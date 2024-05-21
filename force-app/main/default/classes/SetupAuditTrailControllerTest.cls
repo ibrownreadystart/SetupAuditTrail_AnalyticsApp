@@ -1,25 +1,44 @@
 @isTest
 private class SetupAuditTrailControllerTest {
-    static testMethod void testCopyLast24HoursSetupAuditTrailRecords() {
+
+    @isTest
+    static void testCopyLast24HoursSetupAuditTrailRecords() {
+        
         Test.startTest();
         SetupAuditTrailController.copyLast24HoursSetupAuditTrailRecords();
         Test.stopTest();
+
+        Boolean batchJobExists = [SELECT COUNT() FROM AsyncApexJob WHERE JobType = 'BatchApex' AND Status = 'Completed' LIMIT 1] > 0;
+        System.assert(batchJobExists, 'The batch job for copying the last 24 hours of records should have been enqueued.');
     }
 
-    static testMethod void testCopyLastSevenDaysSetupAuditTrailRecords() {
+    @isTest
+    static void testCopyLastSevenDaysSetupAuditTrailRecords() {
+
         Test.startTest();
         SetupAuditTrailController.copyLastSevenDaysSetupAuditTrailRecords();
         Test.stopTest();
+
+        Boolean batchJobExists = [SELECT COUNT() FROM AsyncApexJob WHERE JobType = 'BatchApex' AND Status = 'Completed' LIMIT 1] > 0;
+        System.assert(batchJobExists, 'The batch job for copying the last 7 days of records should have been enqueued.');
     }
 
-    static testMethod void testCopyAllSetupAuditTrailRecords() {
+    @isTest
+    static void testCopyAllSetupAuditTrailRecords() {
+
         Test.startTest();
         SetupAuditTrailController.copyAllSetupAuditTrailRecords();
         Test.stopTest();
+
+        Boolean batchJobExists = [SELECT COUNT() FROM AsyncApexJob WHERE JobType = 'BatchApex' AND Status = 'Completed' LIMIT 1] > 0;
+        System.assert(batchJobExists, 'The batch job for copying all records should have been enqueued.');
     }
 
-    static testMethod void testDeleteAllSetupAuditTrailRecords() {
+    @isTest
+    static void testDeleteAllSetupAuditTrailRecords() {
+
         List<SetupAuditTrail2__c> records = new List<SetupAuditTrail2__c>();
+
         for (Integer i = 0; i < 10; i++) {
             records.add(new SetupAuditTrail2__c(
                 SetupAuditTrailRecordId__c = 'TestRecordId' + i,

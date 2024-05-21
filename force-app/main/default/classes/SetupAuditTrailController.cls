@@ -1,4 +1,5 @@
 public with sharing class SetupAuditTrailController {
+
     @AuraEnabled
     public static void copyLast24HoursSetupAuditTrailRecords() {
         Database.executeBatch(new SetupAuditTrail2Last24Hours_Batch());

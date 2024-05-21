@@ -1,6 +1,7 @@
 public with sharing class SetupAuditTrail2All_Batch implements Database.Batchable<sObject> {
 
     public Database.QueryLocator start(Database.BatchableContext batchContext) {
+
     	String setupAuditTrailQuery = 'SELECT Id, Action, Display, CreatedBy.Name, CreatedDate FROM SetupAuditTrail';
     	if(Test.isRunningTest()) {
         	setupAuditTrailQuery += ' LIMIT 200';
@@ -9,21 +10,24 @@ public with sharing class SetupAuditTrail2All_Batch implements Database.Batchabl
 	}
 
     public void execute(Database.BatchableContext batchContext, List<SetupAuditTrail> records) {
-        String defaultCreatedByName = Label.SetupAuditTrail2_SfdcString;
 
+        String defaultCreatedByName = Label.SetupAuditTrail2_SfdcString;
         Map<Id, SetupAuditTrail> recordMap = new Map<Id, SetupAuditTrail>();
+
         for (SetupAuditTrail record : records) {
             recordMap.put(record.Id, record);
         }
 
         List<SetupAuditTrail2__c> existingRecords = [SELECT SetupAuditTrailRecordId__c FROM SetupAuditTrail2__c WHERE SetupAuditTrailRecordId__c IN :recordMap.keySet()];
-
+        
         for (SetupAuditTrail2__c existingRecord : existingRecords) {
             recordMap.remove(existingRecord.SetupAuditTrailRecordId__c);
         }
 
         List<SetupAuditTrail2__c> newRecords = new List<SetupAuditTrail2__c>();
+        
         for (SetupAuditTrail record : recordMap.values()) {
+
             String createdByName = String.isBlank(record.CreatedBy.Name) ? defaultCreatedByName : record.CreatedBy.Name;
             SetupAuditTrail2__c newRecord = new SetupAuditTrail2__c(
                 SetupAuditTrailRecordId__c          = record.Id,
@@ -46,7 +50,9 @@ public with sharing class SetupAuditTrail2All_Batch implements Database.Batchabl
     }
 
     private void logErrors(Database.SaveResult[] results) {
+
         List<String> errorMessages = new List<String>();
+        
         for (Database.SaveResult result : results) {
             if (!result.isSuccess()) {
                 for (Database.Error error : result.getErrors()) {

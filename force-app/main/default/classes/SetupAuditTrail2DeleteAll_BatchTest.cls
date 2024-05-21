@@ -1,7 +1,10 @@
 @isTest
 private class SetupAuditTrail2DeleteAll_BatchTest {
-    static testMethod void test() {
+
+    @isTest
+    static void testDeleteAllSetupAuditTrailRecords() {
         List<SetupAuditTrail2__c> records = new List<SetupAuditTrail2__c>();
+
         for (Integer i = 0; i < 10; i++) {
             records.add(new SetupAuditTrail2__c(
                 SetupAuditTrailRecordId__c = 'TestRecordId' + i,

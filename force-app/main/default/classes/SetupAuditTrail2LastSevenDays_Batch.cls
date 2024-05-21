@@ -1,4 +1,5 @@
 public with sharing class SetupAuditTrail2LastSevenDays_Batch implements Database.Batchable<sObject> {
+
     public Database.QueryLocator start(Database.BatchableContext batchContext) {
         DateTime now = DateTime.now();
         DateTime sevenDaysAgo = now.addDays(-7);
@@ -11,9 +12,10 @@ public with sharing class SetupAuditTrail2LastSevenDays_Batch implements Databas
     }
 
     public void execute(Database.BatchableContext batchContext, List<SetupAuditTrail> records) {
-        String defaultCreatedByName = Label.SetupAuditTrail2_SfdcString;
 
+        String defaultCreatedByName = Label.SetupAuditTrail2_SfdcString;
         Map<Id, SetupAuditTrail> recordMap = new Map<Id, SetupAuditTrail>();
+
         for (SetupAuditTrail record : records) {
             recordMap.put(record.Id, record);
         }
@@ -25,7 +27,9 @@ public with sharing class SetupAuditTrail2LastSevenDays_Batch implements Databas
         }
 
         List<SetupAuditTrail2__c> newRecords = new List<SetupAuditTrail2__c>();
+
         for (SetupAuditTrail record : recordMap.values()) {
+
             String createdByName = String.isBlank(record.CreatedBy.Name) ? defaultCreatedByName : record.CreatedBy.Name;
             SetupAuditTrail2__c newRecord = new SetupAuditTrail2__c(
                 SetupAuditTrailRecordId__c          = record.Id,
@@ -38,6 +42,7 @@ public with sharing class SetupAuditTrail2LastSevenDays_Batch implements Databas
         }
 
         if (!newRecords.isEmpty()) {
+
             Database.SaveResult[] results = Database.insert(newRecords, false);
             logErrors(results);
         }
@@ -48,7 +53,9 @@ public with sharing class SetupAuditTrail2LastSevenDays_Batch implements Databas
     }
 
     private void logErrors(Database.SaveResult[] results) {
+
         List<String> errorMessages = new List<String>();
+        
         for (Database.SaveResult result : results) {
             if (!result.isSuccess()) {
                 for (Database.Error error : result.getErrors()) {

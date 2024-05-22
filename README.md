@@ -26,7 +26,7 @@ Install in [Production](https://login.salesforce.com/packaging/installPackage.ap
 
 > Once installed, create a report with chart based on your use case.
 
-> > Update the Setup Audit Trail Analytics app page to include a Report Chart component pointing to your new custom report.
+> Update the Setup Audit Trail Analytics app page to include a Report Chart component pointing to your new custom report.
 
 ### What is SetupAuditTrail Analytics?
 

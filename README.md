@@ -48,7 +48,7 @@ SetupAuditTrail Analytics includes a Delete All feature to remove all the data i
 
 > Consider other batch operations that may be running in your org.
 
-> This solutions uses a custom object.
+> This solution uses a custom object.
 
 > [Custom object record](https://help.salesforce.com/s/articleView?id=000383664&type=1) size is 2 KB.
 

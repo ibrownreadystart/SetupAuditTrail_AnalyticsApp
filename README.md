@@ -10,9 +10,9 @@ Mirror the SetupAuditTrail setup object and leverage native Salesforce Reports a
 
 The below installation links are also available to install as an unlocked package:
 
-Install in [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tU1000000LUUXIA4).
+Install in [Sandbox](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tU1000000LkmDIAS).
 
-Install in [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tU1000000LUUXIA4).
+Install in [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tU1000000LkmDIAS).
 
 **NOTE**: 
 

@@ -1,4 +1,4 @@
-### SetupAuditTrail Analytics:
+### SetupAuditTrail Analytics
 
 No Event Monitoring and no interest in SOQL, browser extensions, or taking data out of Salesforce? 
 

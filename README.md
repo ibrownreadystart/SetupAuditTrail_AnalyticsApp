@@ -1,7 +1,5 @@
 ### SetupAuditTrail Analytics
 
-No Event Monitoring and no interest in SOQL, browser extensions, or taking data out of Salesforce? 
-
 Mirror the SetupAuditTrail setup object and leverage native Salesforce Reports and Dashboards.
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/ibrownreadystart/SetupAuditTrail_AnalyticsApp/blob/main/images/setupaudittrailanalyticsscreen.png)

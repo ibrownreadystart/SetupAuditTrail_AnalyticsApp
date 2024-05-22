@@ -6,7 +6,7 @@ Mirror the SetupAuditTrail setup object and leverage native Salesforce Reports a
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/ibrownreadystart/SetupAuditTrail_AnalyticsApp/blob/main/images/setupaudittrailanalyticsscreen.png)
 
-### Install SetupAuditTrail Analytics:
+### Install SetupAuditTrail Analytics
 
 The below installation links are also available to install as an unlocked package:
 
